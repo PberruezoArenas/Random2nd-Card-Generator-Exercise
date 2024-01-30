@@ -6,35 +6,20 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //   //Random number
-  //   console.log("Parte divertida");
-  //   let number = document.getElementById("number");
-  //   number.innerHTML = generateRamdomNumber();
-
-  //   //Random suit
-  //   document
-  //     .querySelector("#card")
-  //     .setAttribute("content", generateRamdomSuits());
-  //
-
-  //SOLUCIÓN CON ARRAYS
-  // let numeros = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
-  // let suits = ["spade", "heart", "diamond", "club"];
-
-  //CARD OBJECT SOLUTION
+  //Card Object Solution
 
   let card = {
     numbers: ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"],
     suits: ["spade", "heart", "diamond", "club"]
   };
 
-  //RANDOM ARRAY
+  //Random Array
 
   function generateRandomCard(array) {
     let indexRandom = Math.floor(Math.random() * array.length);
     return array[indexRandom];
   }
-  //RANDOM CARD
+  //Random Card
 
   function printCard() {
     const selectedNumber = generateRandomCard(card.numbers);
@@ -43,7 +28,7 @@ window.onload = function() {
     const cardElement = document.querySelector("#card");
     const numberElement = document.querySelector("#number");
 
-    // NUMBER INPUT VALIDATE
+    // Number Input Validate
     let widthInput = document.getElementById("widthInput").value;
     let heightInput = document.getElementById("heightInput").value;
 
@@ -72,21 +57,20 @@ window.onload = function() {
 
   printCard();
 
-  // Enter key for width
+  // Enter key for new width and height
   widthInput.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
       printCard();
     }
   });
 
-  // Enter key for height
   heightInput.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
       printCard();
     }
   });
 
-  // Seconds countdown
+  // Seconds countdown and reload
   let restSeconds = 10;
 
   function refreshCount() {
@@ -107,6 +91,22 @@ window.onload = function() {
 //   ////////////////////////////////////////////////////////
 
 //  OTRAS SOLUCIONES
+
+//
+//   //Random number
+//   console.log("Parte divertida");
+//   let number = document.getElementById("number");
+//   number.innerHTML = generateRamdomNumber();
+
+//   //Random suit
+//   document
+//     .querySelector("#card")
+//     .setAttribute("content", generateRamdomSuits());
+//
+
+//SOLUCIÓN CON ARRAYS
+// let numeros = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+// let suits = ["spade", "heart", "diamond", "club"];
 
 //Aleatorios número - color - carta
 // function generateRamdomNumber() {
